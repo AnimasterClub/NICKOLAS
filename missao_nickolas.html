@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Missão Nickolas</title>
+
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #000000, #050505);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+}
+
+.container {
+  background: #0a0a0a;
+  border: 2px solid #FFCA01;
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 25px #FFCA0155;
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 10px #FFCA01);
+}
+
+h1 {
+  color: #FFCA01;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 80%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #FFCA01;
+  background: #000;
+  color: #FFCA01;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #FFCA01;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e6b800;
+}
+
+.box {
+  display: none;
+}
+
+.erro {
+  color: #ff4444;
+  margin-top: 10px;
+}
+
+#final {
+  line-height: 1.6;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img class="logo" src="https://cdn-icons-png.flaticon.com/512/616/616490.png">
+
+<h1>🎮 NICKOLAS 🎮</h1>
+
+<div id="fase1">
+<p>👉 Quem nunca te abandona, mesmo nos momentos difíceis?</p>
+<input id="r1">
+<br>
+<button onclick="f1()">Enviar</button>
+<p id="e1" class="erro"></p>
+</div>
+
+<div id="fase2" class="box">
+<p>👉 Fazer o certo mesmo quando ninguém vê se chama?</p>
+<input id="r2">
+<br>
+<button onclick="f2()">Enviar</button>
+<p id="e2" class="erro"></p>
+</div>
+
+<div id="fase3" class="box">
+<p>👉 O que faz alguém nunca te abandonar?</p>
+<input id="r3">
+<br>
+<button onclick="f3()">Enviar</button>
+<p id="e3" class="erro"></p>
+</div>
+
+<div id="fase4" class="box">
+<p>👉 Quem quer respeito dos outros precisa antes?</p>
+<input id="r4">
+<br>
+<button onclick="f4()">Enviar</button>
+<p id="e4" class="erro"></p>
+</div>
+
+<div id="fase5" class="box">
+<p>👉 O que sempre vai ser a base de tudo na sua vida?</p>
+<input id="r5">
+<br>
+<button onclick="f5()">Enviar</button>
+<p id="e5" class="erro"></p>
+</div>
+
+<div id="final" class="box">
+<h2 style="color:#FFCA01;">💚 MISSÃO COMPLETA</h2>
+
+<p>
+Se você chegou até aqui…<br><br>
+
+é porque você entende o que realmente importa.<br><br>
+
+Família, lealdade e honestidade não são só palavras…<br>
+são escolhas que você faz todos os dias.<br><br>
+
+E nunca esqueça:<br>
+<strong>nunca cobre algo de alguém sem dar o exemplo.</strong><br><br>
+
+Continue sendo esse cara de valor.<br><br>
+
+💛
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function f1(){
+  let r = r1.value.toLowerCase();
+  if(r.includes("familia") || r.includes("família") || r.includes("pais") || r.includes("pai") || r.includes("mãe")){
+    fase1.style.display="none"; fase2.style.display="block";
+  } else e1.innerText="💭 Pense em quem sempre está com você.";
+}
+
+function f2(){
+  let r = r2.value.toLowerCase();
+  if(r.includes("honestidade") || r.includes("honesto") || r.includes("fazer o certo")){
+    fase2.style.display="none"; fase3.style.display="block";
+  } else e2.innerText="💭 Fazer o certo sempre.";
+}
+
+function f3(){
+  let r = r3.value.toLowerCase();
+  if(r.includes("lealdade") || r.includes("leal") || r.includes("companheirismo")){
+    fase3.style.display="none"; fase4.style.display="block";
+  } else e3.innerText="💭 Algo que mantém alguém ao seu lado.";
+}
+
+function f4(){
+  let r = r4.value.toLowerCase();
+  if(r.includes("exemplo") || r.includes("dar exemplo") || r.includes("ser exemplo")){
+    fase4.style.display="none"; fase5.style.display="block";
+  } else e4.innerText="💭 Antes de cobrar, você precisa fazer primeiro.";
+}
+
+function f5(){
+  let r = r5.value.toLowerCase();
+  if(r.includes("familia") || r.includes("família") || r.includes("amor")){
+    fase5.style.display="none"; final.style.display="block";
+  } else e5.innerText="💭 Pense no que é mais importante.";
+}
+
+</script>
+
+</body>
+</html>
